@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@layer base {
+  html, body {
+    width: 100%;
+    min-height: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: 'Proxima Nova', 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    touch-action: manipulation;
+  }
+  
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom crisp scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.6);
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .badge-card {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+}
+
+@page {
+  margin: 8mm;
+}
+
+/* Standard CR80 ID Card & Badge: 85.6 mm × 54 mm */
+.badge-cr80-landscape {
+  width: 85.6mm !important;
+  height: 54mm !important;
+  min-width: 85.6mm !important;
+  max-width: 85.6mm !important;
+  min-height: 54mm !important;
+  max-height: 54mm !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+.badge-cr80-portrait {
+  width: 54mm !important;
+  height: 85.6mm !important;
+  min-width: 54mm !important;
+  max-width: 54mm !important;
+  min-height: 85.6mm !important;
+  max-height: 85.6mm !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+@keyframes bounceSubtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-bounce-subtle {
+  animation: bounceSubtle 2.5s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 8s linear infinite;
+}
+

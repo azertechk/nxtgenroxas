@@ -1,0 +1,6 @@
+{
+  "name": "NXTGEN Roxas Attendance Management System",
+  "description": "Kids Church Sunday attendance system with birth-year level placement (Aquarium to Level 4), volunteer scheduling, ministry coordinator dashboard, and security tag check-in.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
